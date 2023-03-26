@@ -13,7 +13,9 @@ proxy.$message({
 
 <template>
   首页
-  <el-button>element按钮</el-button>
+  <div class="text">红红火火恍恍惚惚</div>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@import "@/assets/scss/home/index.scss";
+</style>
