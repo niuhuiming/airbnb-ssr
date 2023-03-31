@@ -1,0 +1,48 @@
+{
+  "header": {
+    "menu": {
+      "trips": "Trips",
+      "history": "Browsing History",
+      "language": "Language",
+      "chinese": "简体中文",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "menu": {
+      "support": "Support",
+      "hosting": "Hosting",
+      "about": "About",
+      "discover": "Discovery"
+    },
+    "submenu": {
+      "careers": "Careers",
+      "news": "News",
+      "policy": "Policy",
+      "accessibility": "Accessibility",
+      "trustAndSafe": "Trust And Safe",
+      "invite": "Invite Friends",
+      "evection": "Evection",
+      "magzine": "Airbnb Magzine",
+      "airbnborg": "Airbnb.org",
+      "tryHosting": "Try hosting",
+      "hospitality": "Hospitality",
+      "responsibility": "How to host responsibly",
+      "experiences": "Experiences",
+      "resources": "Explore hosting resources",
+      "help": "Help Center",
+      "neighbors": "Report a neighborhood concern"
+    }
+  },
+  "loading": "Loading",
+  "require": "{name} is required",
+  "auth": {
+    "signinBtn": "Sign in",
+    "signupBtn": "Sign up",
+    "signoutBtn": "Sign out",
+    "signinTab": "Sign in",
+    "signupTab": "Sign up",
+    "phone": "Phone number",
+    "password": "Password"
+  }
+}

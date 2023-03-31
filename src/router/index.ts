@@ -1,29 +1,24 @@
-import home from '../views/home/index.vue'
-import mine from '../views/mine/index.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { airbnbDB } from '@/db';
+import languagesObjectStore from '@/db/objectStores/languages';
+import usersObjectStore from '@/db/objectStores/users';
+import { useLocaleStore } from '@/stores/locale';
+import { createRouter, createWebHistory } from 'vue-router';
+import routes from './routes';
 
-const routes = [
-  {
-    path: '/home',
-    name: 'home',
-    component: home,
-    meta: {
-      title: '',
-      keepAlive: false,
-    },
-  },
-  {
-    path: '/mine',
-    name: 'mine',
-    component: mine,
-    meta: {
-      title: '',
-      keepAlive: false,
-    },
-  },
-]
-
-export default createRouter({
+const router = createRouter({
   history: createWebHistory(),
-  routes,
-})
+  routes
+});
+
+router.beforeEach(async (_to, _from, next) => {
+  // * 初始化所有对象仓库
+  await airbnbDB.open([languagesObjectStore, usersObjectStore]);
+
+  // * 初始化语言
+  const localeStore = useLocaleStore();
+  localeStore.getLanguage();
+
+  next();
+});
+
+export default router;
